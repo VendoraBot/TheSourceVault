@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    transition: background .2s, color .2s;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#searchBar, select, .guide-btn {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1em;
+}
+
+.categories {
+    text-align: center;
+    padding: 15px;
+}
+
+.categories button {
+    padding: 10px 16px;
+    margin: 4px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    padding: 30px;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform .15s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card a {
+    color: var(--accent);
+    text-decoration: none;
+}
