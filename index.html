@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheSourceVault</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/themes.css">
+</head>
+
+<body class="theme-dark">
+
+<header>
+    <h1>TheSourceVault</h1>
+    <p>Your organized vault of tools, resources, and knowledge.</p>
+
+    <div class="header-controls">
+        <input type="text" id="searchBar" placeholder="Search…" onkeyup="searchCards()">
+        
+        <select id="themeSelect" onchange="switchTheme()">
+            <option value="theme-dark">Dark</option>
+            <option value="theme-light">Light</option>
+            <option value="theme-oled">OLED Black</option>
+            <option value="theme-neon">Neon Cyber</option>
+        </select>
+
+        <a class="guide-btn" href="guide.html">Beginner’s Guide</a>
+    </div>
+</header>
+
+<nav class="categories">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('Music')">Music</button>
+    <button onclick="filterCategory('Games')">Games</button>
+    <button onclick="filterCategory('Software')">Software</button>
+    <button onclick="filterCategory('Streaming')">Streaming</button>
+    <button onclick="filterCategory('Tools')">Tools</button>
+</nav>
+
+<section class="card-grid">
+
+    <!-- MUSIC CATEGORY -->
+    <div class="card" data-category="Music">
+        <h2>Tidal</h2>
+        <p>Official high-fidelity music streaming platform.</p>
+        <a href="https://tidal.com" target="_blank">Visit Site</a>
+    </div>
+
+    <div class="card" data-category="Music">
+        <h2>Better SoundCloud</h2>
+        <p>A customized interface enhancing SoundCloud usability.</p>
+        <a href="#" target="_blank">Visit Site</a>
+    </div>
+
+    <div class="card" data-category="Music">
+        <h2>Lo-Fi Mini Player</h2>
+        <p>Minimalistic music player for relaxing lo-fi beats.</p>
+        <a href="#" target="_blank">Visit Player</a>
+    </div>
+
+    <!-- GAME / SOFTWARE CATEGORY (placeholders for you to fill in safely) -->
+    <div class="card" data-category="Games">
+        <h2>Game Resource Hub</h2>
+        <p>Placeholder. Add your own link.</p>
+        <a href="#">Add Link</a>
+    </div>
+
+    <div class="card" data-category="Software">
+        <h2>Software Archive</h2>
+        <p>Placeholder. Add your own link.</p>
+        <a href="#">Add Link</a>
+    </div>
+
+    <div class="card" data-category="Tools">
+        <h2>General Utility Tools</h2>
+        <p>Placeholder category for any tool sites.</p>
+        <a href="#">Add Link</a>
+    </div>
+
+</section>
+
+<script src="assets/script.js"></script>
+
+</body>
+</html>
