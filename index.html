@@ -1,85 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheSourceVault</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="assets/themes.css">
-</head>
+<meta charset="UTF-8">
+<title>TheSourceVault</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #eee;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+    }
 
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #search {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        margin-top: 25px;
+        color: #4da3ff;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin: 6px 0;
+    }
+
+    a {
+        color: #86c6ff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    /* simple themes */
+    .theme-dark { background: #111; color: #eee; }
+    .theme-light { background: #f5f5f5; color: #111; }
+    .theme-oled { background: #000; color: #fff; }
+
+    #themeSelect {
+        float: right;
+        padding: 6px 8px;
+        font-size: 14px;
+        border-radius: 6px;
+        border: none;
+        margin-top: -40px;
+    }
+</style>
+</head>
 <body class="theme-dark">
 
-<header>
-    <h1>TheSourceVault</h1>
-    <p>Your organized vault of tools, resources, and knowledge.</p>
+<h1>TheSourceVault</h1>
 
-    <div class="header-controls">
-        <input type="text" id="searchBar" placeholder="Search…" onkeyup="searchCards()">
-        
-        <select id="themeSelect" onchange="switchTheme()">
-            <option value="theme-dark">Dark</option>
-            <option value="theme-light">Light</option>
-            <option value="theme-oled">OLED Black</option>
-            <option value="theme-neon">Neon Cyber</option>
-        </select>
+<select id="themeSelect" onchange="switchTheme()">
+    <option value="theme-dark">Dark</option>
+    <option value="theme-light">Light</option>
+    <option value="theme-oled">OLED</option>
+</select>
 
-        <a class="guide-btn" href="guide.html">Beginner’s Guide</a>
-    </div>
-</header>
+<input type="text" id="search" placeholder="Search..." onkeyup="searchLinks()">
 
-<nav class="categories">
-    <button onclick="filterCategory('all')">All</button>
-    <button onclick="filterCategory('Music')">Music</button>
-    <button onclick="filterCategory('Games')">Games</button>
-    <button onclick="filterCategory('Software')">Software</button>
-    <button onclick="filterCategory('Streaming')">Streaming</button>
-    <button onclick="filterCategory('Tools')">Tools</button>
-</nav>
+<!-- SIMPLE, CLEAN, EASY TO EDIT -->
 
-<section class="card-grid">
+<div id="content">
 
-    <!-- MUSIC CATEGORY -->
-    <div class="card" data-category="Music">
-        <h2>Tidal</h2>
-        <p>Official high-fidelity music streaming platform.</p>
-        <a href="https://tidal.com" target="_blank">Visit Site</a>
+    <div class="section">
+        <h2>Entertainment</h2>
+        <ul>
+            <li><a href="https://tidal.com">Tidal</a></li>
+            <li><a href="#">Better SoundCloud</a></li>
+            <li><a href="#">Lo-Fi Mini Player</a></li>
+<li><a href="https://pstream.mov">PStream</a></li>
+<li><a href="https://broflix.cc">BroFlix</a></li>
+<li><a href="https://cineby.gd">Cineby</a></li>
+
+        </ul>
     </div>
 
-    <div class="card" data-category="Music">
-        <h2>Better SoundCloud</h2>
-        <p>A customized interface enhancing SoundCloud usability.</p>
-        <a href="#" target="_blank">Visit Site</a>
+    <div class="section">
+        <h2>Games</h2>
+        <ul>
+<li><a href="#">SteamRip</a></li>
+<li><a href="#">SteamGG</a></li>
+<li><a href="#">FitGirl Repacks</a></li>
+<li><a href="#">DODI Repacks</a></li>
+<li><a href="#">CS RIN RU</a></li>
+<li><a href="#">RuTracker</a></li>
+<li><a href="https://w16.monkrus.ws/">Monkrus</a></li>
+        </ul>
     </div>
 
-    <div class="card" data-category="Music">
-        <h2>Lo-Fi Mini Player</h2>
-        <p>Minimalistic music player for relaxing lo-fi beats.</p>
-        <a href="#" target="_blank">Visit Player</a>
+    <div class="section">
+        <h2>Software</h2>
+        <ul>
+<li><a href="https://soft98.ir">Soft98 (Official)</a></li>
+<li><a href="https://portableapps.com">PortableApps</a></li>
+<li><a href="https://filehippo.com">FileHippo</a></li>
+<li><a href="https://ninite.com">Ninite</a></li>
+        </ul>
     </div>
 
-    <!-- GAME / SOFTWARE CATEGORY (placeholders for you to fill in safely) -->
-    <div class="card" data-category="Games">
-        <h2>Game Resource Hub</h2>
-        <p>Placeholder. Add your own link.</p>
-        <a href="#">Add Link</a>
+    <div class="section">
+        <h2>Tools</h2>
+        <ul>
+            <li><a href="#">Utility Tool #1</a></li>
+            <li><a href="#">Utility Tool #2</a></li>
+        </ul>
     </div>
 
-    <div class="card" data-category="Software">
-        <h2>Software Archive</h2>
-        <p>Placeholder. Add your own link.</p>
-        <a href="#">Add Link</a>
-    </div>
+</div>
 
-    <div class="card" data-category="Tools">
-        <h2>General Utility Tools</h2>
-        <p>Placeholder category for any tool sites.</p>
-        <a href="#">Add Link</a>
-    </div>
+<script>
+function searchLinks() {
+    const query = document.getElementById("search").value.toLowerCase();
+    const sections = document.querySelectorAll(".section");
 
-</section>
+    sections.forEach(sec => {
+        const text = sec.innerText.toLowerCase();
+        sec.style.display = text.includes(query) ? "block" : "none";
+    });
+}
 
-<script src="assets/script.js"></script>
+function switchTheme() {
+    const theme = document.getElementById("themeSelect").value;
+    document.body.className = theme;
+}
+</script>
 
 </body>
 </html>
