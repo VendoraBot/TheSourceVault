@@ -1,0 +1,50 @@
+/* Shared Variables */
+:root {
+    --accent: #4da3ff;
+}
+
+/* DARK THEME */
+.theme-dark {
+    background: #111;
+    color: #eee;
+}
+
+.theme-dark .card {
+    background: #1a1a1a;
+}
+
+/* LIGHT THEME */
+.theme-light {
+    background: #f3f3f3;
+    color: #222;
+}
+
+.theme-light .card {
+    background: white;
+    border: 1px solid #ddd;
+}
+
+/* OLED BLACK */
+.theme-oled {
+    background: #000;
+    color: #fff;
+}
+
+.theme-oled .card {
+    background: #0a0a0a;
+}
+
+/* NEON CYBER */
+.theme-neon {
+    background: #06070f;
+    color: #b7e3ff;
+}
+
+.theme-neon .card {
+    background: #0d1126;
+    border: 1px solid #00aaff;
+}
+
+.theme-neon a {
+    color: #32c3ff;
+}
